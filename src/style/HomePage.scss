@@ -1,0 +1,86 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+main {
+
+  section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color2;
+
+    .imgContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-size: 110px;
+        color: #ffffff;
+        opacity: 0.4;
+        position: absolute;
+        font-family: 'Macondo', cursive;
+        text-shadow: -1px 0 $color1, 0 1px $color1, 1px 0 $color1, 0 -1px $color1;
+        transition-property: text-shadow;
+        transition-duration: 200s;
+        transition-delay: 200s;
+      }
+
+
+      img {
+        width: 30ù;
+        transition: width 100ms linear, display;
+
+      }
+
+    }
+
+    .imgContainer:hover {
+      h1 {
+        opacity: 1;
+        color: $color3;
+        z-index: 1;
+      }
+
+      img {
+        width: 25%;
+        z-index: 2;
+      }
+    }
+
+  }
+
+  #test {
+    background-color: black;
+    height: 100vh;
+
+    section:nth-child(2) {
+      img {
+        border: 1px red;
+        height: 60px;
+      }
+
+      article {
+        h2 {
+          color: red;
+        }
+
+        p {
+          color: aqua;
+        }
+      }
+
+      img:last-child {
+        width: 50px;
+      }
+    }
+  }
+}
